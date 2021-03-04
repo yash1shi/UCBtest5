@@ -19,6 +19,7 @@ public class iOScam : MonoBehaviour
         {
             Debug.Log("webcam not found");
         }
+     }
 
 
 
@@ -29,6 +30,7 @@ public class iOScam : MonoBehaviour
             Debug.Log("Name: " + device.name);
         }
     }
+    
 
 
 }
