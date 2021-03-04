@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.iOS;
-using System;
+using System.Collections;
 
 
 
@@ -22,18 +20,7 @@ public class iOScam : MonoBehaviour
             Debug.Log("webcam not found");
         }
 
-        findMicrophones();
 
-        yield return Application.RequestUserAuthorization(UserAuthorization.Microphone);
-        if (Application.HasUserAuthorization(UserAuthorization.Microphone))
-        {
-            Debug.Log("Microphone found");
-        }
-        else
-        {
-            Debug.Log("Microphone not found");
-        }
-    }
 
     void findWebCams()
     {
@@ -43,11 +30,5 @@ public class iOScam : MonoBehaviour
         }
     }
 
-    void findMicrophones()
-    {
-        foreach (var device in Microphone.devices)
-        {
-            Debug.Log("Name: " + device);
-        }
-    }
+
 }
